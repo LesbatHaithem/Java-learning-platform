@@ -3,18 +3,19 @@ package dz.ensticp.formation.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Student Model - Represents a student/learner
- */
 public class Student {
     private int id;
     private String name;
     private String email;
+    private String password; // Added for email/password auth
+    private String authProvider; // "LOCAL" or "GOOGLE"
+    private String googleId; // For Google OAuth
     private List<Course> enrolledCourses;
     
     // Constructors
     public Student() {
         this.enrolledCourses = new ArrayList<>();
+        this.authProvider = "LOCAL";
     }
     
     public Student(int id, String name, String email) {
@@ -22,6 +23,16 @@ public class Student {
         this.name = name;
         this.email = email;
         this.enrolledCourses = new ArrayList<>();
+        this.authProvider = "LOCAL";
+    }
+    
+    public Student(int id, String name, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.enrolledCourses = new ArrayList<>();
+        this.authProvider = "LOCAL";
     }
     
     // Getters and Setters
@@ -47,6 +58,30 @@ public class Student {
     
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+    
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public String getAuthProvider() {
+        return authProvider;
+    }
+    
+    public void setAuthProvider(String authProvider) {
+        this.authProvider = authProvider;
+    }
+    
+    public String getGoogleId() {
+        return googleId;
+    }
+    
+    public void setGoogleId(String googleId) {
+        this.googleId = googleId;
     }
     
     public List<Course> getEnrolledCourses() {
@@ -82,6 +117,7 @@ public class Student {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", authProvider='" + authProvider + '\'' +
                 ", enrolledCourses=" + enrolledCourses.size() +
                 '}';
     }

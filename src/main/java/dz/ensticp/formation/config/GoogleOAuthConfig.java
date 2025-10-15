@@ -2,8 +2,8 @@ package dz.ensticp.formation.config;
 
 public class GoogleOAuthConfig {
     
-    public static final String CLIENT_ID = "836250009345-uthc2d1fraboh7rfvgqat0ibmt0qs7fm.apps.googleusercontent.com";
-    public static final String CLIENT_SECRET = "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";
+    public static final String CLIENT_ID = "?";
+    public static final String CLIENT_SECRET = "?";
     
     // Redirect URI must match exactly what you configured in Google Cloud Console
     public static final String REDIRECT_URI = "http://localhost:8080/java-learning-platform/auth/google/callback";

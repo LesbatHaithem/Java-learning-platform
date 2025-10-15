@@ -1,8 +1,10 @@
-package dz.ensticp.formation.model;
+package dz.ensticp.formation.dao;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import dz.ensticp.formation.model.Student;
 
 public class StudentDAO {
     // In-memory storage (replace with database in production)

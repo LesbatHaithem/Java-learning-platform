@@ -240,7 +240,8 @@
             <% } %>
 
             <!-- Google Sign In Button -->
-            <form method="post" action="<%= request.getContextPath() %>/auth">
+               <a href="<%= request.getContextPath() %>/auth/google/login"
+
                 <input type="hidden" name="action" value="google-signin">
                 <button type="submit" class="btn btn-google">
                     <svg width="20" height="20" viewBox="0 0 48 48">
@@ -251,7 +252,7 @@
                     </svg>
                     Continue with Google
                 </button>
-            </form>
+            </a>
 
             <div class="divider">
                 <span>OR</span>

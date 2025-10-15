@@ -1,4 +1,4 @@
-package dz.ensticp.formation.model;
+package dz.ensticp.formation.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

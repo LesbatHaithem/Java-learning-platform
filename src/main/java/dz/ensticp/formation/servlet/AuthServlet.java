@@ -1,10 +1,9 @@
 // 4. AuthServlet.java - Authentication Servlet
 package dz.ensticp.formation.servlet;
 
-import dz.ensticp.formation.model.StudentDAO;
 import dz.ensticp.formation.model.Student;
-import dz.ensticp.formation.model.PasswordUtil;
-
+import dz.ensticp.formation.util.PasswordUtil;
+import dz.ensticp.formation.dao.StudentDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
